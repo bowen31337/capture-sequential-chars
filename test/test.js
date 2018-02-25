@@ -2,8 +2,6 @@ const captureNsequentialCharsInAstring = require('../dist/captureNsequentialChar
 
 const test = require('tape')
 
-const sinon = require('sinon')
-
 const before = test
 const after = test
 

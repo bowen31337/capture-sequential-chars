@@ -1,10 +1,10 @@
 'use strict'
 
-const captureNsequentialCharsInAstring = (string, n) => {
+const captureNsequentialCharsInAstring = (string, n = 2) => {
 	const stLength = string.length
 	if (n < 2) return ''
 	if (stLength < n) return ''
-	for (var i = 0; i < stLength; i++) {
+	for (var i = 0; i < stLength - n + 1; i++) {
 		for (var j = 0; j < n - 1; j++) {
 			if ('undefined' !== typeof string[i + j + 1]) {
 				if (
