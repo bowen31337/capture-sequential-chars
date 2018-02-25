@@ -1,6 +1,6 @@
 {
 	"name": "capture-n-sequential-chars-in-string",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description":
 		"this is a re-created debounce version with less codes in ES6 built with Rollup",
 	"main": "dist/captureNsequentialChars.cjs.js",
