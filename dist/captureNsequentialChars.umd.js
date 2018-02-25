@@ -1,28 +1,37 @@
-!(function(e, t) {
-	'object' == typeof exports && 'undefined' != typeof module
-		? (module.exports = t())
-		: 'function' == typeof define && define.amd
-			? define(t)
-			: (e.captureNsequentialChars = t())
+;(function(global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined'
+		? (module.exports = factory())
+		: typeof define === 'function' && define.amd
+			? define(factory)
+			: (global.captureNsequentialChars = factory())
 })(this, function() {
 	'use strict'
-	return function(e, t) {
-		var r = e.length
-		if (t < 2) return ''
-		if (r < t) return ''
-		for (var n = 0; n < r; n++) {
-			for (
-				var o = 0;
-				o < t - 1 &&
-				(void 0 === e[n + o + 1] ||
-					1 * e.charCodeAt(n + o) + 1 == 1 * e.charCodeAt(n + o + 1));
-				o++
-			);
-			if (o === t - 1) {
-				var f = e.slice(n, n + t)
-				return t === f.length ? f : ''
+
+	var captureNsequentialCharsInAstring = function captureNsequentialCharsInAstring(
+		string,
+		n
+	) {
+		var stLength = string.length
+		if (n < 2) return ''
+		if (stLength < n) return ''
+		for (var i = 0; i < stLength; i++) {
+			for (var j = 0; j < n - 1; j++) {
+				if ('undefined' !== typeof string[i + j + 1]) {
+					if (
+						string.charCodeAt(i + j) * 1 + 1 !==
+						string.charCodeAt(i + j + 1) * 1
+					) {
+						break
+					}
+				}
+			}
+			if (j === n - 1) {
+				var captureString = string.slice(i, i + n)
+				return n === captureString.length ? captureString : ''
 			}
 		}
 		return ''
 	}
+
+	return captureNsequentialCharsInAstring
 })

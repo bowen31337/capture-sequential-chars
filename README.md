@@ -1,21 +1,21 @@
-# easyDebounce
+# captureNsequentialChars
 
-This is a re-created debounce version with less codes in ES6 built with Rollup.
+This is to capture the first matched n sequential characters in a string.
 
 ## Installation
 
 ### Node JS (>=8.4.0)
 
 ```bash
-    npm install easy-debounce
+    npm install capture-n-sequential-chars-in-string
     or
-    yarn add easy-debounce
+    yarn add capture-n-sequential-chars-in-string
 ```
 
 ### browser
 
 ```js
-<script src="https://unpkg.com/easy-debounce@1.0.2/dist/easyDebounce.umd.js" />
+<script src="https://unpkg.com/capture-n-sequential-chars-in-string@1.0.0/dist/captureNsequentialChars.umd.js" />
 ```
 
 ## Usage
@@ -23,24 +23,24 @@ This is a re-created debounce version with less codes in ES6 built with Rollup.
 ### ES Modules
 
 ```js
-import debounce from 'easy-debounce'
+import captureNsequentialChars from 'capture-n-sequential-chars-in-string'
 ```
 
 ### common js
 
 ```js
-const debounce = require('easy-debounce')
+const captureNsequentialChars = require('capture-n-sequential-chars-in-string')
 ```
 
 ### browser js
 
 ```js
-var debounce = window.easyDebounce
+var captureNsequentialChars = window.captureNsequentialChars
 ```
 
 ## API
 
-### debounce(fn, wait, [ immediate || false ])
+### captureNsequentialChars(string,n)
 
 ## License
 
