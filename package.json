@@ -51,6 +51,6 @@
 		"url": "git@github.com:bowen31337/capture-sequential-chars.git"
 	},
 	"engines": {
-		"node": ">=8.4.0"
+		"node": ">=6.11.2"
 	}
 }
